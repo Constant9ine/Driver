@@ -47,9 +47,9 @@ export default class ProfileScreen extends React.Component {
         const userData=firebase.database().ref('users/'+this.state.currentUser.uid);
         userData.once('value',userData=>{
             if(userData.val()){
-                //var str = userData.val().location.add
-                //var tempAdd = str.split(",")[0] + ","+str.split(",")[1] + ','+str.split(",")[3]+ ','+str.split(",")[4];
-                //this.setState({tempAddress:tempAdd});
+                var str = userData.val().location.add
+                var tempAdd = str.split(",")[0] + ","+str.split(",")[1] + ','+str.split(",")[3]+ ','+str.split(",")[4];
+                this.setState({tempAddress:tempAdd});
                 this.setState(userData.val(),(res)=>{
                 });
             }
@@ -293,7 +293,6 @@ export default class ProfileScreen extends React.Component {
                     <Text style={styles.textPropStyle} >{this.state.firstName.toUpperCase()+" "+ this.state.lastName.toUpperCase()}</Text>
                 </View>
 
-				
                 <View style={styles.newViewStyle}>
                     <View style={styles.myViewStyle}>
                         <View style={styles.iconViewStyle}>
@@ -309,7 +308,19 @@ export default class ProfileScreen extends React.Component {
                             <Text style={styles.emailAdressStyle}>{this.state.email}</Text>
                         </View>
                     </View>
-                  
+                    <View style={styles.myViewStyle}>
+                        <View style={styles.iconViewStyle}>
+                            <Icon
+                                name='globe'
+                                type='simple-line-icon'
+                                color={colors.GREY.btnPrimary}
+                            />
+                            <Text style={styles.text1}>{languageJSON.location}</Text>
+                        </View>
+                        <View style={{flex:1}}>
+                            <Text style={styles.text2}>{this.state.tempAddress}</Text>
+                        </View>
+                    </View>
                     <View style={styles.myViewStyle}>
                         <View style={styles.iconViewStyle}>
                             <Icon

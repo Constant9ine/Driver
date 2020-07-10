@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 import * as firebase from 'firebase'
-import GetPushToken from '../common/GetPushToken';
+import GetPushToken from '../common/GetPushToken/';
 import { Notifications } from 'expo';
 import  languageJSON  from '../common/language';
 import { Audio } from 'expo-av';

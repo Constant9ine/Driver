@@ -27,7 +27,7 @@ export default class SideMenu extends React.Component{
                 {key: 9, name: languageJSON.about_us, navigationName: 'About', icon: 'info', type: 'entypo', child: 'ninethChild'},
                 {key: 10, name: languageJSON.sign_out, icon: 'sign-out', type: 'font-awesome', child: 'lastChild'}
             ],
-            //profile_image:null
+            profile_image:null
         }
         
     }
@@ -114,7 +114,12 @@ export default class SideMenu extends React.Component{
                             </TouchableOpacity>
                     } />
                 </View>
-              
+                <View style={{opacity: 0.6}}>
+                    <Image 
+                        source={require('../../assets/images/logo.png')} 
+                        style={{width: '100%'}}
+                    />
+                </View>
             </View>
         )
     }

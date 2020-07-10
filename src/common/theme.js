@@ -1,3 +1,5 @@
+//some default colors used in the application
+
 export const theme = {
   FONT_ONE:'Roboto-Bold',
   FONT_SIZE_BUTTONS: 18,
@@ -15,8 +17,6 @@ export const colors = {
   RED: 'red',
   SKY: '#1E81D3',
   DARK: "#070807",
-  DEEP_SKY:"#0370bc",
-  LIGHT_RED:"#FF2121",
 
   GREY: {
     default: '#243235',
@@ -27,11 +27,7 @@ export const colors = {
     iconPrimary: "#c8c8c8",
     iconSecondary: "#3d3d3d",
     background: "rgba(22,22,22,0.8)",
-    Smoke_Grey:"#dcdcdc",
-    Trolley_Grey:"#808080",
-    border:"#d6d6d6",
-    Deep_Nobel:"#9f9f9f",
-    whiteish:"#E5E3E3",
+    Deep_Nobel:"#9f9f9f"
   },
   BLUE: {
     default: "blue",
@@ -39,8 +35,7 @@ export const colors = {
     secondary: "#007aff",
     light: "#8ec4e6",
     dark: "#111b1e",
-    sky: "#4a90e2",
-    Deep_Blue:"#0386e1",
+    sky: "#4a90e2"
   },
   YELLOW: {
     primary: "#fda33b",
